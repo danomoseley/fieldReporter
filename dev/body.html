@@ -1,0 +1,1536 @@
+<div style="position: absolute" id="offlineMsg">
+</div>
+<div id="outerContainer">
+	<div id="header">
+		<div class="centertube">
+			<div id="logo"></div>
+			<div id="navBar">
+				<table>
+					<tr>
+						<td>
+							<a href="default.aspx" class="active menu_nav" title="Return to the portal home screen"
+								id="home_nav">Home</a>
+						</td>
+						<td>
+							<a href="default.aspx" class="menu_nav" title="Work Order Listing"
+								id="orders_nav">Orders</a>
+						</td>
+						<td>
+							<a href="inspections.aspx" class="menu_nav" title="View Order Listing"
+								id="inspection_nav">Survey</a>
+						</td>
+						<td>
+							<a href="inspections.aspx" class="menu_nav" title="View Message Listing"
+								id="message_nav">Messages</a>
+						</td>
+						<td>
+							<a href="inspections.aspx" class="menu_nav" title="View Vendor Listing"
+								id="vendor_nav">ISP</a>
+						</td>
+						<td>
+							<a href="inspections.aspx" class="menu_nav" title="View Locations Listing"
+								id="location_nav">Locations</a>
+						</td>
+
+						<td>
+							<a href="inspections.aspx" class="menu_nav" title="View Settings"
+								id="setting_nav">Settings</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="subMenu" id="home_sub">
+								<ul>
+								<li><a class='subLink' id='info' href='#'>Info</a></li>
+								<li><a class='active subLink' id='location' href='#' >Map</a></li></ul>
+
+							</div>
+						</td>
+						<td>
+							<div class="subMenu" id="orders_sub">
+								<ul><li><a class='active subLink' id='listing' href='#'>Listing</a></li></ul>
+							</div>
+						</td>
+						<td>
+							<div class="subMenu" id="inspection_sub">
+								<ul><li><a class='active subLink' id='listing' href='#'>Survey Listing</a></li>									
+								<li><a class='subLink' id='addInspection' href='#' >Add</a></li>
+								</ul>
+							</div>
+						</td>
+
+						<td>
+							<div class="subMenu" id="message_sub">
+								<ul><li><a class='active subLink' id='mailBox' href='#'>Mailbox</a></li>
+								<li><a class='subLink' id='newMessage' href='#' >New</a></li>
+								</ul>
+							</div>
+						</td>
+						<td>
+							<div class="subMenu" id="vendor_sub">
+								<ul><li><a class='active subLink' id='vendorListing' href='#'>Listing</a></li></ul>
+							</div>
+						</td>
+						<td>
+							<div class="subMenu" id="Location_sub">
+								<ul></ul>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<div style="clear: both;">
+				</div>
+			</div>
+			<div id="login">
+				<div id="ping" style="float: right;">
+				</div>
+				<div style="clear:both;">
+				Small<input class="changeFont" type="radio" name="fontSize" value="small">
+				Medium<input class="changeFont" type="radio" name="fontSize" value="medium">
+				Large<input class="changeFont" type="radio" name="fontSize" value="large">
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;">
+		</div>
+	</div>
+	<div id="container">
+		<div id="main">
+			<div id="maincontainer">
+				<div id="content">
+				</div>
+				<div class="windowChrome">
+
+				<div id="homeWindow" class="window rounded panel alt_panel_color">
+					<div id="info" class="subscreen screen resizable">
+						<div class="topBar helpLocation">
+							<h4 style="white-space:nowrap;">
+								Information
+							</h4>
+						</div>
+						<div id="infoList">
+							<div class="infoText">
+								<p class='heading1'></p>
+							
+								<p class='info1'></p>
+							
+								<p class='info2'></p>
+							
+								<br/>
+							
+								<p class='heading2'></p>
+
+								<p class="address" id='address1'></p>
+								<p class="address" id='address2'></p>
+								<p class="address" id='email'></p>
+								
+								<br/>
+							
+								<p class='heading3'></p>
+								<p class="address" id='info3'></p>
+								<p class="address" id='info4'></p>
+								<p class="address" id='info5'></p>
+							</div>
+						</div>
+					</div>
+					<div id="location" class="screen active">
+						<div class="topBar helpLocation">
+							<div style="float:left;">
+								<table>
+									<tr>
+										<td><h4>Location</h4></td>
+									</tr>
+									<tr>
+										<td>
+										<b>Radius(miles)</b></td>
+										<td>
+										<select name="select" id="radius" class="homeFilter">
+											
+											<option value="2" >2</option>
+											<option value="5" selected="selected">5</option>
+											<option value="10" >10</option>
+											<option value="30" >30</option>
+											<option value="40" >40</option>
+											<option value="50" >50</option>
+											<option value="60" >60</option>
+											<option value="70" >70</option>
+											<option value="80" >80</option>
+											<option value="90" >90</option>
+											<option value="100" >100</option>
+
+										</select>&nbsp;</td>
+										<td><b>Location</b></td>
+										<td><input type="text" id="state" class="stateFilter" style="width: 150px;"></td>
+										<td><input type="button" class="view_button" value="Clear" id="homeClear" style="min-width: 70px;"></td>
+										
+										<td rowspan=2><input type="button" class="view_button" value="Locations" id="showLocation" style="min-width: 80px;min-height:50px;"></td>
+										<td><input type="button" class="view_button" value="ISP" id="ISP" style="min-width: 70px;"></td>		
+																								
+										<td rowspan=2><input type="button" class="view_button" value="Stop" id="stop" style="min-width: 70px;min-height:50px;"></td>
+									</tr>
+									<tr>
+										<td colspan=2>
+										<b><font color="RoyalBlue ">Current</font> WO <font color="aqua">Before</font>/<font color="MediumVioletRed">After</font></b></td>
+										<td>
+										<select name="select" id="days" class="homeFilter">
+											<option value="0" selected="selected">0</option>
+											<option value="1" >1</option>
+											<option value="2" >2</option>
+											<option value="3" >3</option>
+											<option value="4" >4</option>
+											<option value="5" >5</option>
+											<option value="6" >6</option>
+											<option value="7" >7</option>
+											<option value="8" >8</option>
+											<option value="9" >9</option>
+											<option value="10" >10</option>
+											<option value="11" >11</option>
+											<option value="12" >12</option>
+											<option value="13" >13</option>
+											<option value="14" >14</option>
+											<option value="15" >15</option>
+											<option value="16" >16</option>
+											<option value="17" >17</option>
+											<option value="18" >18</option>
+											<option value="19" >19</option>
+											<option value="20" >20</option>
+											<option value="21" >21</option>
+											<option value="22" >22</option>
+											<option value="23" >23</option>
+											<option value="24" >24</option>
+											<option value="25" >25</option>
+											<option value="26" >26</option>
+											<option value="27" >27</option>
+											<option value="28" >28</option>
+											<option value="29" >29</option>
+											<option value="30" >30</option>
+											
+
+										</select>&nbsp;</td>
+										
+										<td>
+											<b>Total Locations</b> 
+											<select id="totalLocations" class="homeFilter" style="width: 60px;">
+												<option value="50" >50</option>
+												<option value="100" selected="selected">100</option>
+												<option value="200" >200</option>
+												<option value="300" >300</option>
+												<option value="400" >400</option>
+												<option value="500" >500</option>
+											</select>
+										</td>	
+										<td>
+											<b>Client</b> <select id="clientName" class="homeFilter" style="width: 60px;"><option value='All'>All</option></select>
+										</td>
+										<td><input type="button" class="whereButton" value="Tablets" style="min-width: 70px;"></td>
+									</tr>
+								</table>
+								<a href="http://api.intelligentdata.com/nest_ipad/home.html" id="homeHelp"></a>
+								
+							</div>
+														
+							<div class="footer"></div>
+						</div>
+						
+						<div id="map_canvas" class="content">
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="windowChrome">
+				<div id="ordersWindow" style="overflow:hidden;" class="window rounded panel alt_panel_color">
+					<div id="container">
+					<div id="listing" style="float:left;overflow:hidden;width:100%;" class="screen active">
+						<div class="topBar helpLocation" style="min-width:775px;">
+							
+							<div id='filters' style="float:left;">
+								<tr class="filters">
+									<td><h4 style="white-space:nowrap;">
+										Listing
+									</h4></td>
+									<td>
+										<b>Beg Date</b> <input id="begDate" class="orderFilter" style="width: 60px;">
+									</td>&nbsp;
+									<td>
+										<b>End Date</b> <input id="endDate" class="orderFilter" style="width: 60px;">
+									</td>&nbsp;
+									<td>
+										<input id="Radio1" type="radio" Name="datetype" value="input" class="orderFilter" checked="true"/> Input Date
+										<input id="Radio2" type="radio" Name="datetype" value="onsite" class="orderFilter"/> OnSite Date
+									</td>&nbsp;
+									<td>
+										<b>Company</b> <select id="companyName" class="orderFilter" style="width: 60px;"><option value='All'>All</option></select>
+									</td>&nbsp;
+									<td><input type="button" class="view_button" value="Clear" id="ordersClear"></td>
+								</tr>
+								<br/>
+								<tr class="filters">
+									<td>
+										<b>WO #</b> <input id="WONumber" type="tel" class="orderFilter" style="width: 60px;">
+									</td>&nbsp;
+									<td>
+										<b>Location #</b> <input id="location1" class="orderFilter" style="width: 60px;">
+									</td>&nbsp;
+									<td>
+										<b>Category</b> <select id="category" class="orderFilter" style="width: 60px;"><option value='All'>All</option></select>
+									</td>&nbsp;
+									<td>
+										<b>Order Type</b> <select id="orderType" class="orderFilter" style="width: 60px;"><option value='All'>All</option></select>
+									</td>
+									<td style="float:right;">
+										<b>Total Records</b>
+										<select name="select" id="size" class="orderFilter">
+											<option value="10" >10</option>
+											<option value="50">50</option>
+											<option value="100" selected="selected">100</option>
+											<option value="200">200</option>
+											<option value="300">300</option>
+											<option value="400">400</option>
+											<option value="500">500</option>
+											<option value="700">700</option>
+											<option value="1000">1000</option>
+										</select>
+									</td>
+								</tr>
+								<a href="http://api.intelligentdata.com/nest_ipad/order.html" id="orderHelp"></a>
+							</div>
+							<div class="footer"></div>
+						</div>
+						<div class="content">
+
+							<table id="orders" class="employee">
+								<thead>
+									<tr>
+										<th width="75">
+											Images
+										</th>
+										<th width="75">
+											ID
+										</th>
+										<th class="center">
+											Company
+										</th>
+										<th class="center">
+											Location #
+										</th>
+										<th class="center">
+											Order Type
+										</th>
+										<th class="center">
+											Category
+										</th>
+										<th class="center">
+											DNE
+										</th>
+										<th class="center">
+											Input Date
+										</th>
+										<th class="center">
+											OnSite Date
+										</th>
+									</tr>
+								</thead>
+								<tbody id="ordersGrid" class="alternate">
+								</tbody>
+							</table>
+						</div>
+						
+						
+						
+					</div>
+					<div id="detail" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen resizable">
+						<div class="topBar">
+
+							<h4>
+								Detail
+							</h4>
+							<div class="close"></div>
+
+						</div>
+						<div class="content" style="border-left: 1px solid black;width:92%;">
+							<div class="section detail">
+								<h4 class="title">Details:</h4>
+								<div class="content"></div>
+							</div>
+							<br />
+
+							<div class="section notes">
+								<h4 class="title">Notes:</h4>
+								<div class="content">
+								</div>
+							</div>
+
+							<div class="section docs">
+								<h4 class="title">Docs:</h4>
+								<div class="content"></div>
+							</div>
+							<div class="section signature">
+								<h4 class="title">Digital Signature:</h4>
+								<div class="content">
+									<a id="sigLink" class="fancy" href="#data"><input class='view_button' type='button' value='Approve This Work Order Via Digital Signature'></a>
+									<span id="sigSigner"></span><span id="sigDate"></span>
+									<img id="sigIMG">
+								</div>
+							</div>
+							<!--------------------------------------------- -->
+							<div id="PODetail" class="section PODetail" style="display: none;">
+								<h4 class="title">PO Detail</h4>
+
+								<div class="content">
+									<table id="PO" class="employee" style="width:75%;">
+										<thead>
+											<tr>
+												<th class="left">
+													PO Number
+												</th>
+												<th class="left">
+													Status
+												</th>
+												<th class="left">
+													Vendor
+												</th>
+												<th class="left">
+													NTE
+												</th>
+												<th class="left">
+													Notes
+												</th>
+
+											</tr>
+										</thead>
+										<tbody id="POGrid" class="alternate">
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div id="PONotes" class="section PONotes" style="display: none;">
+								<h4 class="title">PO Note</h4>
+								<div class="content"></div>
+							</div>
+							<!--------------------------------------------- -->
+
+							<div style="display: none;">
+								<div id="data" style="width:1000px;">
+									<div class="sigPad">
+										<tr><td>
+
+											Print your name
+										<input type="text" name="name" id="name" class="name">
+										</td><td>
+										<button id="submitSignature">
+											I accept the terms of this agreement.</button></td></tr>
+										<a href="#clear"><button id="clear" class="clearButton">Clear</button></a>
+
+										<p class="drawItDesc">
+											Draw your signature</p>
+
+										<div class="sig sigWrapper" style="height:200px;width:900px;">
+											<div class="typed">
+											</div>
+											<canvas class="pad" width="900" height="200"></canvas>
+											<input type="hidden" name="output" class="output"></div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!------------------------------------------------ -->
+					<div id="dispatchDetail" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+						<div class="topBar">
+							<h4>
+								Dispatch Detail
+							</h4>
+							<div class="close"></div>
+						</div>
+
+
+						<div class="content" style="border-left: 1px solid black;width:600px;">
+							<h4 class="title">DIspatch Details:</h4>
+							</br>
+							<div class="dispatch"> </div>
+						</div>
+					</div>
+					<!------------------------------------------------ -->
+					<div id="tasks" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+						<div class="topBar">
+							<h4>
+								Tasks
+							</h4>
+						</div>
+						<div class="content" style="border-left: 1px solid black;width:600px;">
+							<div id="taskArea"></div>
+						</div>
+					</div>
+					<div id="payroll" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+						<div class="topBar">
+							<h4>
+								Payroll
+							</h4>
+						</div>
+						<div class="content" style="border-left: 1px solid black;width:600px;">
+							<h4 class="title">Add Payroll</h4>
+							<div class="section">
+							<select id="payrollEmployee">
+								<option value="0">Employee</option>
+							</select>
+							<input id="orderPayrollWorked" type="number" style="width:85px;" placeholder="Hours Worked" />
+							<input id="orderPayrollRegular" type="number" style="width:46px;" placeholder="Regular Hours" />
+							<input id="orderPayrollOvertime" type="number" style="width:52px;" placeholder="Overtime Hours" />
+							<input id="orderPayrollDoubleTime" type="number" style="width:67px;" placeholder="Doubletime Hours" />
+							<input id="orderPayrollBonus" type="number" style="width:39px;" placeholder="Bonus Hours" />
+
+							<input id="saveOrderPayroll" style="float:right;" type="submit" value="Save Payroll" />
+							<div id="orderPayrollError"></div>
+							</div>
+							<br /><hr /><br />
+							<table style="width:100%;">
+								<thead>
+									<tr>
+										<th>Employee</th><th>Hours</th><th>Regular Hours</th><th>Special Hours</th>
+									</tr>
+								</thead>
+								<tbody id="payrollArea"></tbody>
+							</table>
+						</div>
+					</div>
+					<div id="material" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+						<div class="topBar">
+							<h4>
+								Material
+							</h4>
+						</div>
+						<div class="content" style="border-left: 1px solid black;width:600px;">
+							 <h4 class="title">Add Material</h4>
+							 <div class="section">
+							<div style="float:left;width:200px;">Material Category:</div><div style="float:left;width:200px;">Material:</div>
+							<select style="float:left;clear:left;" id="orderMaterialCategory">
+							</select>
+							<select style="float:left;" id="orderMaterial">
+								<option>No Materials</option>
+							</select>
+							<div style="float:left;clear:left;width:78px;">Unit Price:</div><div style="float:left;width:200px;">Quantity:</div>
+							<div style="float:left;clear:left;"><input style="width:75px;" id="orderMaterialUnitPrice" type="number" /></div>
+							<div style="float:left;"><input style="width:75px;" id="orderMaterialUnitQuantity" type="number" value="1" /></div>
+							<div style="float:left;"><input style="clear:left;" id="orderMaterialAdd" type="submit" value="Add Material" /></div>
+							<div style="clear:both;"></div>
+							</div>
+							<br /><hr /><br />
+							<table style="width:100%">
+								<thead>
+									<tr><th>Code</th><th>Quantity</th><th>Unit Price</th><th>Price</th><th>Tax</th><th>Total</th></tr>
+								</thead>
+								<tbody id="materialArea"></tbody>
+								<tfoot>
+									<tr>
+										<td>Totals</td><td id="quantityTotal"></td><td id="unitPriceTotal"></td><td id="priceTotal"></td><td id="taxTotal"></td><td id="total"></td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+					<div id="notes" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+						<div class="topBar">
+							<h4>
+								Notes
+							</h4>
+							<div class="close"></div>
+						</div>
+						<div class="content" style="border-left: 1px solid black; width: 600px;">
+							<h4 class="title">Add Note</h4>
+							<textarea id="orderNote" style="width:98%;height:75px;" placeholder="Note Contents"></textarea>
+							<input id="orderAddNote" style="float:right;" type="submit" value="Save Note" />
+							<br /><br /><br /><hr /><br />
+							<ul id="noteArea" class="notes"></ul>
+						</div>
+					</div>
+					<div id="docs" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+						<div class="topBar">
+							<h4>
+								Docs
+							</h4>
+							<div class="close"></div>
+						</div>
+						<div class="content" style="border-left: 1px solid black;width:600px;">
+							<table style="width:100%;">
+								<thead>
+									<tr>
+										<th></th><th>Document Name</th><th>Type</th><th>Comment</th><th>Upload Time</th><th>Uploader</th>
+									</tr>
+								</thead>
+								<tbody id="documentArea" class="alternate"></tbody>
+							</table>
+						</div>
+					</div>
+					<div id="add" class="screen">
+						<div class="topBar">
+							<h4>
+								Add New Order
+							</h4>
+						</div>
+						<div class="content">
+						</div>
+					</div>
+					</div>
+				</div>
+				</div>
+				<div class="windowChrome">
+					<div id="inspectionWindow" class="window rounded panel alt_panel_color">
+						<div id="listing" class="screen active">
+							<div class="topBar helpLocation">
+								<div id="inspectionNotification"></div>
+								<div style="float: left;">
+									<table>
+										<tr><h4>
+											Survey Listing</h4></tr>
+										<tr class="filters">
+											<td><b>Beg Date</b></td>
+											<td><input id="begDate1" class="inspectionFilter" style="width: 60px;"></td>
+											<td><b>End Date</b></td>
+											<td><input id="endDate1" class="inspectionFilter" style="width: 60px;"></td>
+											<td><b>Status</b></td>
+											<td><select id="inspectionType" class="inspectionFilter" style="width: 60px;">
+													<option selected="selected">All</option>
+													<option>New</option>
+													<option>Completed</option>
+													<option>Cancelled</option>
+												</select>
+											</td>
+											<td><b>Company</b></td>
+											<td><select id="company" class="inspectionFilter" style="width: 60px;">
+													<option>All</option>
+												</select>
+											</td>
+											<td><b>Location</b></td>
+											<td><input id="loc" class="inspectionFilter" style="width: 60px;"></td>
+										</tr>	
+										<tr>	
+											<td colspan=4><input id="Radio2" type="radio" Name="inspectiondate" value="input" class="inspectionFilter" checked="true"/> Input Date
+											<input id="Radio2" type="radio" Name="inspectiondate" value="start" class="inspectionFilter" /> Start Date
+											<input id="Radio2" type="radio" Name="inspectiondate" value="end" class="inspectionFilter" /> End Date</td>
+											<td><b>Description</b></td>
+											<td><select id="description" class="inspectionFilter" style="width: 60px;">
+													<option>All</option>
+												</select>
+											</td>
+											<td><b>Total Records</b></td>
+											<td><select name="select" id="size" class="inspectionFilter">
+													<option value="10" selected="selected">10</option>
+													<option value="50">50</option>
+													<option value="100" >100</option>
+													<option value="200">200</option>
+													<option value="300">300</option>
+													<option value="400">400</option>
+													<option value="500">500</option>
+													<option value="700">700</option>
+													<option value="1000">1000</option>
+												</select>
+											</td>
+										</tr>
+									</table>
+
+									<a href="http://api.intelligentdata.com/nest_ipad/survey.html" id="surveyHelp"></a>	
+										
+								</div>
+								<div class="footer"></div>
+								<!-- <select id="inspectionList" class="inspectionDropdown">
+								</select> -->
+							</div>
+							<span style="float: right;" id="Span1"></span>
+							<div class="content">
+								<table id="inspectionList" class="employee">
+									<thead>
+										<tr>
+											<th>SurveyID</th>
+											<th class="center">Company</th>
+											<th class="center">Location</th>
+											<th class="center">Description</th>
+											<th class="center">InputDate</th>
+											<th class="center">StartDate</th>
+											<th class="center">EndDate</th>
+											<th class="center">Status</th>
+										</tr>
+									</thead>
+									<tbody class="alternate"></tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="detail" style="display:none;">
+							<div class="topBar">
+								<h4>Survey Detail</h4>
+								<a href="#" id="inspectionReturn">Return to listing</a>
+							</div>
+							<div class="content" id="inspectionContent">
+								<div id="inspectionHeader"></div>
+								
+								<div id="updateSurvey" style="display:none;">
+								
+								</div>
+								<div id="inspectionGrid">
+								</div>
+								<input type="submit" value="Save Survey" style="width: 100%; height: 50px;
+									margin-top: 10px;" id="inspectionSubmit" />
+							</div>
+						</div>
+
+						<!--   --------------------------------------------------  -->
+												
+						<div id="addInspection" class="screen">
+							<div class="topBar">
+								<h4>Add</h4>
+							</div>
+							<div class="content">
+							</div>
+						</div>
+
+						<div id="addNew" class="screen">
+							<div class="topBar">
+								<h4>Add New</h4>
+							</div>
+							<div class="content">
+							</div>
+						</div>
+
+						<!--   --------------------------------------------------  -->
+
+					</div>
+				</div>
+
+				<!-------------------------------------- -->
+
+				<div class="windowChrome">
+					<div id="messageWindow" class="window rounded panel alt_panel_color">
+						<div id="container">
+							<div id="mailBox" style="float:left;overflow:hidden;width:100%;border: 1px solid #CCC;" class="screen active">
+								<div class="topBar helpLocation">
+									<div style="float:left;">
+										<h4>
+											Messages
+										</h4><br/>
+										<table class="mail" style="float:left;">
+											<th id="inbox" style="width: 42%;">Inbox</th>
+											<th id="sent" style="width: 52%;">Sent Items</th>
+											<th id="unread" style="width: 50%;">Unread</th>
+										</table>
+										<a href="http://api.intelligentdata.com/nest_ipad/message.html" id="messageHelp"></a>
+									</div>
+									<div class="footer"></div>
+								</div>
+								<span style="float: right;" id="Span1"></span>
+								<div class="content">
+									<table id="messageList" class="employee" style="width:100%;">
+										<thead>
+											<tr>
+												<th class="left" style="width:50px"></th>
+												<th class="left">From</th>
+												<th class="left">Subject</th>
+												<th class="left">Message</th>
+												<th class="left">Date</th>
+											</tr>
+										</thead>
+										<tbody id="messageGrid" class="alternate"></tbody>
+									</table>
+
+									<table id="sentList" class="employee" style="width:100%">
+										<thead>
+											<tr>
+												<th class="left" style="width:50px"></th>
+												<th class="left">To</th>
+												<th class="left">Subject</th>
+												<th class="left">Message</th>
+												<th class="left">Date</th>
+											</tr>
+										</thead>
+										<tbody id="sentGrid" class="alternate"></tbody>
+									</table>
+									
+									<table id="unreadList" class="employee" style="width:100%;">
+										<thead>
+											<tr>
+												<th class="left" style="width:50px"></th>
+												<th class="left">From</th>
+												<th class="left">Subject</th>
+												<th class="left">Message</th>
+												<th class="left">Date</th>
+											</tr>
+										</thead>
+										<tbody id="unreadGrid" class="alternate"></tbody>
+									</table>
+
+								</div>
+							</div>
+<!----------------------------------------------->
+							<div id="messageDetail" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen resizable">
+								<div class="topBar">
+									<h4>
+										Message Detail
+									</h4>
+									<div class="close"></div>
+								</div>
+								<div class="content" style="border-left: 1px solid black;width:92%;">
+									<div class="section detail">
+										<h4 class="title">Details:</h4>
+										<div class="content"></div>
+									</div>
+
+								</div>
+							</div>
+<!------------------------------------------------->
+							<div id="newMessage" class="screen">
+								<div class="topBar helpLocation">
+									<h4>Send Message</h4><br/>
+									<input id="discard" type="button" class="whereButton" value="Discard" >									
+								</div>									
+								
+								<div class="content" style="overflow-y: hidden;overflow-x: hidden;">
+									<!--<a id="simple-example-src" href="mailto:">Send E-mail</a>-->										
+									<table id="newMsg" style="width:100%;">
+										<tr><td><input type="button" id="btnTo" class="mailButton" value="To..."></td>&nbsp;											
+											<td><select id="s1" multiple="multiple" style="float:left;">
+												<option>All</option>
+												<option>Chris</option>
+												<option>Dan</option>
+												<option>Jigisha</option>
+												<option>Matt</option>
+												<option>Ricardo</option>
+												<option>Zaree</option>
+												<option>chris@intelligentdata.com</option>
+											</select></td>
+										</tr>
+										<tr>
+											<td>
+												<label class="label1">Subject:</label>
+											</td>&nbsp;
+											<td>
+												<input type="text" id="subject" class="mailTextbox" style="font-size: 17px;width:97.5%">
+											</td>
+										</tr>
+									
+										<tr>
+											<td>
+												<label class="label1">Message:</label>
+											</td>&nbsp;
+											<td>
+												<textarea rows="10" id="message" class="mailTextbox" style="font-size: 17px;width:99%"></textarea>
+											</td>
+										</tr>
+									</table>
+										<input id="send" type="button" class="mailButton" value="Send" style="width:100%;height:50px">
+									
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				
+				<!--  --------------------------->
+				
+				<div class="windowChrome">
+					<div id="vendorWindow" class="window rounded panel alt_panel_color">
+						 <div id="container">
+							<div id="vendorListing" style="float:left;overflow:hidden;width:100%;border: 1px solid #CCC;" class="screen active">
+								<div class="topBar helpLocation" style="min-width:775px;">
+									<div style="float:left;">
+										<h4 style="white-space:nowrap;">
+											ISP Listing
+										</h4>
+										<br/>
+										<tr class="filters">
+											<td>
+												<b>Company</b> <input id="vendorCompany" class="vendorFilter" style="width: 60px;">
+											</td>&nbsp;
+											<td>
+												<b>State</b> <select id="vendorState" class="vendorFilter" style="width: 60px;"><option selected="selected">All</option></select>
+											</td>&nbsp;
+											<td>
+												<b>City</b> <input id="vendorCity" class="vendorFilter" style="width: 60px;">
+											</td>&nbsp;											
+											<td style="float:right;">
+												<b>Total Records</b>
+												<select name="select" id="vendorTotal" class="vendorFilter">
+													<option value="10" >10</option>
+													<option value="50">50</option>
+													<option value="100" selected="selected">100</option>
+													<option value="200">200</option>
+													<option value="300">300</option>
+													<option value="400">400</option>
+													<option value="500">500</option>
+													<option value="700">700</option>
+													<option value="1000">1000</option>
+												</select>
+											</td>
+										</tr>
+										<a href="http://api.intelligentdata.com/nest_ipad/isp.html" id="ispHelp"></a>
+									</div>
+									<div class="footer"></div>
+								</div>
+								<div class="content">
+
+									<table id="vendors" class="employee">
+										<thead>
+											<tr>
+												<th width="75">
+													Images
+												</th>
+												<th width="75">
+													ISP ID
+												</th>
+												<th class="left">
+													Company
+												</th>
+												<th class="left">
+													City
+												</th>
+												<th class="left">
+													State
+												</th>
+												<th class="left">
+													Phone
+												</th>
+												<th class="left">
+													Contact
+												</th>
+												
+											</tr>
+										</thead>
+										<tbody id="vendorGrid" class="alternate">
+										</tbody>
+									</table>
+								</div>
+							</div>
+							
+							<div id="vendorDetail" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen resizable">
+								<div class="topBar">
+									<h4>
+										Vendor Detail
+									</h4>
+									<div class="close"></div>
+								</div>
+								<div class="content" style="border-left: 1px solid black;width:97%;">
+									<div class="section detail">
+										<h4 class="title">Details:</h4>
+										<div class="content"></div>
+									</div>
+									<div class="section policy">
+										<h4 class="title">Compliancy Information:</h4>
+										<div class="content"></div>
+									</div>
+									<div class="section Comment">
+										<h4 class="title">Comments:</h4>
+										<div class="content"></div>
+									</div>	
+									<div class="section Vendornotes">
+										<h4 class="title">Notes:</h4>
+										<div class="content"></div>
+									</div>
+									<div class="section Vendordocs">
+										<h4 class="title">Docs:</h4>
+										<div class="content"></div>
+									</div>
+								</div>
+							</div>
+							
+							<div id="Vendornotes" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+								<div class="topBar">
+									<h4>
+										Notes
+									</h4>
+									<div class="close"></div>
+								</div>
+								<div class="content" style="border-left: 1px solid black; width: 600px;">
+									<h4 class="title">Add Note</h4>
+									<textarea id="ISPNote" style="width:98%;height:75px;" placeholder="Note Contents"></textarea>
+									<input id="ISPAddNote" style="float:right;" type="submit" value="Save Note" />
+									<br /><br /><br /><hr /><br />
+									<ul id="noteArea" class="notes"></ul>
+								</div>
+							</div>
+							<div id="Vendordocs" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+								<div class="topBar">
+									<h4>
+										Docs
+									</h4>
+									<div class="close"></div>
+								</div>
+								<div class="content" style="border-left: 1px solid black;width:600px;">
+									<table style="width:100%;">
+										<thead>
+											<tr>
+												<th></th><th>Document Name</th><th>Type</th><th>Comment</th><th>Upload Time</th><th>Uploader</th>
+											</tr>
+										</thead>
+										<tbody id="documentArea" class="alternate"></tbody>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<!----------------------Location Page --->
+				
+				<div class="windowChrome">
+					<div id="locationWindow" class="window rounded panel alt_panel_color">
+						<div id="container">
+							<div id="Listing" class="screen subscreen active" style="float:left;overflow:hidden;width:100%;border: 1px solid #CCC;display:block;">
+								<div class="topBar helpLocation" style="min-width: 775px;">
+									<div style="float:left;">
+										<h4>Listing</h4><br/>
+										<tr><td class="label"><b>Company</b></td>
+											<td><input type="text" id="loc_company" class="locationFilter"></td>
+											<td class="label"><b>Location</b></td>
+											<td><input type="tel" id="loc_no" class="locationFilter"></td>
+											<td><input id="btnLocationClear" class="view_button" type="Button" value="Clear"></td>
+											<td><b>Total Records</b></td>
+											<td>
+											<select name="select" id="size1" class="locationFilter">
+												<option value="10">10</option>
+												<option value="50">50</option>
+												<option value="100" selected="selected">100</option>
+												<option value="200">200</option>
+												<option value="300">300</option>
+												<option value="400">400</option>
+												<option value="500">500</option>
+												<option value="700">700</option>
+												<option value="1000">1000</option>
+											</select></td>
+										</tr>
+										<a href="http://api.intelligentdata.com/nest_ipad/locations.html" id="locationHelp"></a>
+									</div>
+									<div class="footer"></div>
+								</div>
+								<div class="content">
+									<table style="width:100%" class="alternate" id="Location_Listing_Grid">
+									</table>
+								</div>
+							</div>
+							<div id="Detail" class="screen subscreen resizable" style="float:left;width:0%;display:block;overflow:hidden;">
+								<div class="topBar">
+									<h4>Detail</h4>
+									<div class="close"></div>
+								</div>
+								<div class="content" style="border-left: 1px solid black;width:97%;">
+									<div id="Location_details">
+										<h4 class="title">Details:</h4>
+										<div class="content"></div>
+									</div>									
+									<div id="Location_detail_notes_grid">
+										<h4 class="title">Notes:</h4>
+										<div class="content"></div>
+									</div>
+									<div id="Location_detail_docs_grid">
+										<h4 class="title">Docs:</h4>
+										<div class="content"></div>
+									</div>
+								</div>
+								
+							</div>
+							
+							<div id="locationNotes" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+								<div class="topBar">
+									<h4>
+										Notes
+									</h4>
+									<div class="close"></div>
+								</div>
+								<div class="content" style="border-left: 1px solid black; width: 600px;">
+									<h4 class="title">Add Note</h4>
+									<textarea id="locationNote" style="width:98%;height:75px;" placeholder="Note Contents"></textarea>
+									<input id="locationAddNote" style="float:right;" type="submit" value="Save Note" />
+									<br /><br /><br /><hr /><br />
+									<ul id="noteArea" class="notes"></ul>
+								</div>
+							</div>
+							<div id="locationDocs" style="float:left;width:0%;display:block;overflow:hidden;" class="subscreen screen third">
+								<div class="topBar">
+									<h4>
+										Docs
+									</h4>
+									<div class="close"></div>
+								</div>
+								<div class="content" style="border-left: 1px solid black;width:600px;">
+									<table style="width:100%;">
+										<thead>
+											<tr>
+												<th></th><th>Document Name</th><th>Type</th><th>Comment</th><th>Upload Time</th><th>Uploader</th>
+											</tr>
+										</thead>
+										<tbody id="documentArea" class="alternate"></tbody>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+				</div>	
+
+				<!------  Settings Page ------>
+				<div class="windowChrome">
+					<div id="settingWindow" class="window rounded panel alt_panel_color">
+						<div id="container">
+							<div id="settings" class="screen subscreen active" style="float:left;overflow:hidden;width:30%;border: 1px solid #CCC;display:block;">
+								<div class="topBar helpLocation" style="min-width: 775px;">
+									<div style="float:left;">
+										<h4>Settings</h4><br/>										
+										<a href="http://api.intelligentdata.com/nest_ipad/settings.html" id="settingHelp"></a>
+									</div>
+								<!--	<div class="footer"></div>-->
+								</div>
+								<div class="content">
+									<table style="width:100%;" class="alternate" id="settings_Grid">
+										<tbody>
+											<tr id="general_icon"><td><img style="vertical-align: middle;" src="http://api.intelligentdata.com/nest_ipad/img/setting.png" width="30px" height="30px"><b>  General Settings</b></td></tr>
+											<tr id="home_icon"><td><img style="vertical-align: middle;" src="http://api.intelligentdata.com/nest_ipad/img/home.png" width="30px" height="30px"><b>  Home Page Settings</b></td></tr>
+											<tr id="order_icon"><td><img style="vertical-align: middle;" src="http://api.intelligentdata.com/nest_ipad/img/orders.png" width="30px" height="30px"><b>  Orders Page Settings</b></td></tr>
+											<tr id="survey_icon"><td><img style="vertical-align: middle;" src="http://api.intelligentdata.com/nest_ipad/img/survey.png" width="30px" height="30px"><b>  Survey Page Settings</b></td></tr>
+											<tr id="message_icon"><td><img style="vertical-align: middle;" src="http://api.intelligentdata.com/nest_ipad/img/message.png" width="30px" height="30px"><b>  Messages Page Settings</b></td></tr>
+											<tr id="isp_icon"><td><img style="vertical-align: middle;" src="http://api.intelligentdata.com/nest_ipad/img/isp.png" width="30px" height="30px"><b>  ISP Page Settings</b></td></tr>
+											<tr id="location_icon"><td><img style="vertical-align: middle;" src="http://api.intelligentdata.com/nest_ipad/img/location.png" width="30px" height="30px"><b>  Locations Page Settings</b></td></tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div id="general_settings" class="screen subscreen active setting" style="float:left;overflow:hidden;width:69.5%;display:block !important;">
+								<div class="topBar" style="min-width: 775px;">
+									<div style="float:left;">
+										<h4>General Settings</h4><br/>	
+									</div>								
+								</div>
+								<div class="content">
+									<div style="color:#A85521;font-weight: bold;text-transform: uppercase;margin:5px;padding:0px;">General Settings</div>
+									<table style="width:100%" id="general_settings_Grid" class="settings_table">
+										<tr id="settings_row">
+											<td class='settings_label'>Photo Gallery Apperance</td>
+											<td><select id="photoGallery" class="photoSettingFilter settingFilter" style="width:100px;">
+													<option value="Plain" selected="selected">Plain</option>												
+													<option value="FilmStrip">FilmStrip</option>												
+												</select>
+											</td>
+										<tr>
+									</table>
+								</div>
+							</div>
+							<div id="home_settings" class="screen subscreen active setting" style="float:left;overflow:hidden;width:69.5%;display:block !important;">
+								<div class="topBar" style="min-width: 775px;">
+									<div style="float:left;">
+										<h4>Home Page Settings</h4><br/>	
+									</div>								
+								</div>
+								<div class="content">
+									<div style="color:#A85521;font-weight: bold;text-transform: uppercase;margin:5px;padding:0px;">Map Settings</div>
+									<table style="width:100%" id="home_settings_Grid" class="settings_table">
+										<tr id="settings_row"><td class='settings_label'>Radius</td>
+											<td><select name="select_setting" id="radius_setting" class="homeSettingFilter settingFilter" style="width:100px;">
+													<option value="2" >2</option>
+													<option value="5" selected="selected">5</option>
+													<option value="10" >10</option>
+													<option value="30" >30</option>
+													<option value="40" >40</option>
+													<option value="50" >50</option>
+													<option value="60" >60</option>
+													<option value="70" >70</option>
+													<option value="80" >80</option>
+													<option value="90" >90</option>
+													<option value="100" >100</option>
+												</select>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>Current WO Before/After</td>
+											<td>
+												<select name="select_setting" id="days_setting" class="homeSettingFilter settingFilter" style="width:100px;">
+													<option value="0" selected="selected">0</option>
+													<option value="1" >1</option>
+													<option value="2" >2</option>
+													<option value="3" >3</option>
+													<option value="4" >4</option>
+													<option value="5" >5</option>
+													<option value="6" >6</option>
+													<option value="7" >7</option>
+													<option value="8" >8</option>
+													<option value="9" >9</option>
+													<option value="10" >10</option>
+													<option value="11" >11</option>
+													<option value="12" >12</option>
+													<option value="13" >13</option>
+													<option value="14" >14</option>
+													<option value="15" >15</option>
+													<option value="16" >16</option>
+													<option value="17" >17</option>
+													<option value="18" >18</option>
+													<option value="19" >19</option>
+													<option value="20" >20</option>
+													<option value="21" >21</option>
+													<option value="22" >22</option>
+													<option value="23" >23</option>
+													<option value="24" >24</option>
+													<option value="25" >25</option>
+													<option value="26" >26</option>
+													<option value="27" >27</option>
+													<option value="28" >28</option>
+													<option value="29" >29</option>
+													<option value="30" >30</option>
+												</select>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>Total Locations</td>
+											<td><select id="totalLocations_setting" class="homeSettingFilter settingFilter" style="width: 100px;">
+												<option value="50" >50</option>
+												<option value="100" selected="selected">100</option>
+												<option value="200" >200</option>
+												<option value="300" >300</option>
+												<option value="400" >400</option>
+												<option value="500" >500</option>
+											</select>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>Display</td>
+											<td><input id="display_location" type="radio" Name="displayMapSetting" value="location" class="homeSettingFilter settingFilter" checked="true"/> Locations
+												<input id="display_isp" type="radio" Name="displayMapSetting" value="isp" class="homeSettingFilter settingFilter" /> ISP
+												<input id="display_tablet" type="radio" Name="displayMapSetting" value="tablet" class="homeSettingFilter settingFilter" /> Tablets
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div id="order_settings" class="screen subscreen active setting" style="float:left;overflow:hidden;width:69.5%;display:block !important;">
+								<div class="topBar" style="min-width: 775px;">
+									<div style="float:left;">
+										<h4>Orders Page Settings</h4><br/>	
+									</div>								
+								</div>
+								<div class="content">
+									<div style="color:#A85521;font-weight: bold;text-transform: uppercase;margin:5px;padding:0px;">Orders Page Settings</div>
+									<table style="width:100%" id="order_settings_Grid" class="settings_table">
+										<tr id="settings_row"><td class='settings_label'>Beg Date</td>
+											<td><select name="select" id="orderBegDate_setting" class="orderSettingFilter settingFilter" style="width: 100px;">
+													<option value="0" selected="selected">0</option>
+													<option value="1" >1</option>
+													<option value="2" >2</option>
+													<option value="3" >3</option>
+													<option value="4" >4</option>
+													<option value="5" >5</option>
+													<option value="6" >6</option>
+													<option value="7" >7</option>
+													<option value="8" >8</option>
+													<option value="9" >9</option>
+													<option value="10" >10</option>
+													<option value="11" >11</option>
+													<option value="12" >12</option>
+													<option value="13" >13</option>
+													<option value="14" >14</option>
+													<option value="15" >15</option>
+													<option value="16" >16</option>
+													<option value="17" >17</option>
+													<option value="18" >18</option>
+													<option value="19" >19</option>
+													<option value="20" >20</option>
+													<option value="21" >21</option>
+													<option value="22" >22</option>
+													<option value="23" >23</option>
+													<option value="24" >24</option>
+													<option value="25" >25</option>
+													<option value="26" >26</option>
+													<option value="27" >27</option>
+													<option value="28" >28</option>
+													<option value="29" >29</option>
+													<option value="30" >30</option>
+													<option value="60" >60</option>
+													<option value="90" >90</option>
+												</select>   <b>Days Back</b>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>End Date</td>
+											<td><select name="select" id="orderEndDate_setting" class="orderSettingFilter settingFilter" style="width: 100px;">
+													<option value="0" selected="selected">0</option>
+													<option value="1" >1</option>
+													<option value="2" >2</option>
+													<option value="3" >3</option>
+													<option value="4" >4</option>
+													<option value="5" >5</option>
+													<option value="6" >6</option>
+													<option value="7" >7</option>
+													<option value="8" >8</option>
+													<option value="9" >9</option>
+													<option value="10" >10</option>
+													<option value="11" >11</option>
+													<option value="12" >12</option>
+													<option value="13" >13</option>
+													<option value="14" >14</option>
+													<option value="15" >15</option>
+													<option value="16" >16</option>
+													<option value="17" >17</option>
+													<option value="18" >18</option>
+													<option value="19" >19</option>
+													<option value="20" >20</option>
+													<option value="21" >21</option>
+													<option value="22" >22</option>
+													<option value="23" >23</option>
+													<option value="24" >24</option>
+													<option value="25" >25</option>
+													<option value="26" >26</option>
+													<option value="27" >27</option>
+													<option value="28" >28</option>
+													<option value="29" >29</option>
+													<option value="30" >30</option>
+													<option value="60" >60</option>
+													<option value="90" >90</option>
+												</select>   <b>Days Forward</b>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>Total Records</td>
+											<td><select name="select" id="orderSize_setting" class="orderSettingFilter settingFilter" style="width: 100px;">
+													<option value="10" >10</option>
+													<option value="50">50</option>
+													<option value="100" selected="selected">100</option>
+													<option value="200">200</option>
+													<option value="300">300</option>
+													<option value="400">400</option>
+													<option value="500">500</option>
+													<option value="700">700</option>
+													<option value="1000">1000</option>
+												</select>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>Records per Page</td>
+											<td><select name="select" id="orderPage_setting" class="orderSettingFilter settingFilter" style="width: 100px;">
+													<option value="10" selected="selected">10</option>
+													<option value="25">25</option>
+													<option value="50">50</option>
+													<option value="100" >100</option>																										
+												</select>											
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div id="survey_settings" class="screen subscreen active setting" style="float:left;overflow:hidden;width:69.5%;display:block !important;">
+								<div class="topBar" style="min-width: 775px;">
+									<div style="float:left;">
+										<h4>Survey Page Settings</h4><br/>	
+									</div>								
+								</div>
+								<div class="content">
+									<div style="color:#A85521;font-weight: bold;text-transform: uppercase;margin:5px;padding:0px;">Survay Page Settings</div>
+									<table style="width:100%" id="survey_settings_Grid" class="settings_table">
+										<tr id="settings_row"><td class='settings_label'>Beg Date</td>
+											<td><select name="select" id="surveyBegDate_setting" class="survaySettingFilter settingFilter" style="width: 100px;">
+													<option value="0" selected="selected">0</option>
+													<option value="1" >1</option>
+													<option value="2" >2</option>
+													<option value="3" >3</option>
+													<option value="4" >4</option>
+													<option value="5" >5</option>
+													<option value="6" >6</option>
+													<option value="7" >7</option>
+													<option value="8" >8</option>
+													<option value="9" >9</option>
+													<option value="10" >10</option>
+													<option value="11" >11</option>
+													<option value="12" >12</option>
+													<option value="13" >13</option>
+													<option value="14" >14</option>
+													<option value="15" >15</option>
+													<option value="16" >16</option>
+													<option value="17" >17</option>
+													<option value="18" >18</option>
+													<option value="19" >19</option>
+													<option value="20" >20</option>
+													<option value="21" >21</option>
+													<option value="22" >22</option>
+													<option value="23" >23</option>
+													<option value="24" >24</option>
+													<option value="25" >25</option>
+													<option value="26" >26</option>
+													<option value="27" >27</option>
+													<option value="28" >28</option>
+													<option value="29" >29</option>
+													<option value="30" >30</option>
+													<option value="60" >60</option>
+													<option value="90" >90</option>
+												</select>   <b>Days Back</b>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>End Date</td>
+											<td><select name="select" id="surveyEndDate_setting" class="survaySettingFilter settingFilter" style="width: 100px;">
+													<option value="0" selected="selected">0</option>
+													<option value="1" >1</option>
+													<option value="2" >2</option>
+													<option value="3" >3</option>
+													<option value="4" >4</option>
+													<option value="5" >5</option>
+													<option value="6" >6</option>
+													<option value="7" >7</option>
+													<option value="8" >8</option>
+													<option value="9" >9</option>
+													<option value="10" >10</option>
+													<option value="11" >11</option>
+													<option value="12" >12</option>
+													<option value="13" >13</option>
+													<option value="14" >14</option>
+													<option value="15" >15</option>
+													<option value="16" >16</option>
+													<option value="17" >17</option>
+													<option value="18" >18</option>
+													<option value="19" >19</option>
+													<option value="20" >20</option>
+													<option value="21" >21</option>
+													<option value="22" >22</option>
+													<option value="23" >23</option>
+													<option value="24" >24</option>
+													<option value="25" >25</option>
+													<option value="26" >26</option>
+													<option value="27" >27</option>
+													<option value="28" >28</option>
+													<option value="29" >29</option>
+													<option value="30" >30</option>
+													<option value="60" >60</option>
+													<option value="90" >90</option>
+												</select>   <b>Days Forward</b>
+											</td> 
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>Total Records</td>
+											<td><select name="select" id="surveySize_setting" class="survaySettingFilter settingFilter" style="width: 100px;">
+													<option value="10" >10</option>
+													<option value="50">50</option>
+													<option value="100" selected="selected">100</option>
+													<option value="200">200</option>
+													<option value="300">300</option>
+													<option value="400">400</option>
+													<option value="500">500</option>
+													<option value="700">700</option>
+													<option value="1000">1000</option>
+												</select>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>Records per Page</td>
+											<td><select name="select" id="surveyPage_setting" class="survaySettingFilter settingFilter" style="width: 100px;">
+													<option value="10" selected="selected">10</option>
+													<option value="25">25</option>
+													<option value="50">50</option>
+													<option value="100" >100</option>																										
+												</select>											
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div id="message_settings" class="screen subscreen active setting" style="float:left;overflow:hidden;width:69.5%;display:block !important;">
+								<div class="topBar" style="min-width: 775px;">
+									<div style="float:left;">
+										<h4>Messages Page Settings</h4><br/>	
+									</div>								
+								</div>
+								<div class="content">
+									<div style="color:#A85521;font-weight: bold;text-transform: uppercase;margin:5px;padding:0px;">Messages Page Settings</div>
+									<table style="width:100%" id="message_settings_Grid" class="settings_table">
+										<tr id="settings_row"><td class='settings_label'>Records per Page</td>
+											<td><select name="select" id="messagePage_setting" class="messageSettingFilter settingFilter" style="width: 100px;">
+													<option value="10" selected="selected">10</option>
+													<option value="25">25</option>
+													<option value="50">50</option>
+													<option value="100" >100</option>																										
+												</select>											
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div id="isp_settings" class="screen subscreen active setting" style="float:left;overflow:hidden;width:69.5%;display:block !important;">
+								<div class="topBar" style="min-width: 775px;">
+									<div style="float:left;">
+										<h4>ISP Page Settings</h4><br/>	
+									</div>								
+								</div>
+								<div class="content">
+									<div style="color:#A85521;font-weight: bold;text-transform: uppercase;margin:5px;padding:0px;">ISP Page Settings</div>
+									<table style="width:100%" id="isp_settings_Grid" class="settings_table">
+										<tr id="settings_row"><td class='settings_label'>Total Records</td>
+											<td><select name="select" id="ispSize_setting" class="ispSettingFilter settingFilter" style="width: 100px;">
+													<option value="10" >10</option>
+													<option value="50">50</option>
+													<option value="100" selected="selected">100</option>
+													<option value="200">200</option>
+													<option value="300">300</option>
+													<option value="400">400</option>
+													<option value="500">500</option>
+													<option value="700">700</option>
+													<option value="1000">1000</option>
+												</select>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>Records per Page</td>
+											<td><select name="select" id="ispPage_setting" class="ispSettingFilter settingFilter" style="width: 100px;">
+													<option value="10" selected="selected">10</option>
+													<option value="25">25</option>
+													<option value="50">50</option>
+													<option value="100" >100</option>																										
+												</select>											
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div id="location_settings" class="screen subscreen active setting" style="float:left;overflow:hidden;width:69.5%;display:block !important;">
+								<div class="topBar" style="min-width: 775px;">
+									<div style="float:left;">
+										<h4>Locations Page Settings</h4><br/>	
+									</div>								
+								</div>
+								<div class="content">
+									<div style="color:#A85521;font-weight: bold;text-transform: uppercase;margin:5px;padding:0px;">Locations Page Settings</div>
+									<table style="width:100%" id="location_settings_Grid" class="settings_table">
+										<tr id="settings_row"><td class='settings_label'>Total Records</td>
+											<td><select name="select" id="locationSize_setting" class="locationSettingFilter settingFilter" style="width: 100px;">
+													<option value="10" >10</option>
+													<option value="50">50</option>
+													<option value="100" selected="selected">100</option>
+													<option value="200">200</option>
+													<option value="300">300</option>
+													<option value="400">400</option>
+													<option value="500">500</option>
+													<option value="700">700</option>
+													<option value="1000">1000</option>
+												</select>
+											</td>
+										</tr>
+										<tr id="settings_row"><td class='settings_label'>Records per Page</td>
+											<td><select name="select" id="locationPage_setting" class="locationSettingFilter settingFilter" style="width: 100px;">
+													<option value="10" selected="selected">10</option>
+													<option value="25">25</option>
+													<option value="50">50</option>
+													<option value="100" >100</option>																										
+												</select>											
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+				</div>
+				
+		<div id="loading" class='overlay'>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+<ul id="notifications"></ul>
+<div id="hiddenScreens">
+<!-------------- -->
+<a id="fancybox_opener"></a>
+<div id="fancybox_temp"></div>
+<!-------------- ----->
+</div>
+<div class="test"></div>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div style="clear:both;"></div>

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="getSystem.aspx.cs" Inherits="getSystem" %>

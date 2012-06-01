@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="savePhoto.aspx.cs" Inherits="saveSig" %>
